@@ -1,0 +1,76 @@
+
+
+/* AdminLogin.css */
+
+/* Center the login form in the middle of the screen */
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6c63ff, #3f3d56);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading style */
+.admin-login h2 {
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Login form */
+.admin-login form {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+}
+
+/* Input fields */
+.admin-login input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.admin-login input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0px 0px 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Submit button */
+.admin-login button {
+  background: #6c63ff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect on button */
+.admin-login button:hover {
+  background: #5750d6;
+}
+
+/* Mobile responsive */
+@media (max-width: 400px) {
+  .admin-login form {
+    width: 100%;
+  }
+}

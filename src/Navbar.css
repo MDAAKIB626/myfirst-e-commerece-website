@@ -1,0 +1,55 @@
+
+
+a[href="/admin"] {
+  color: #007bff;           /* Blue link color */
+  text-decoration: none;    /* Remove underline */
+  font-weight: bold;        /* Make text bold */
+  cursor: pointer;          /* Pointer cursor on hover */
+  padding: 4px 8px;         /* Some padding */
+  border-radius: 3px;       /* Slightly rounded corners */
+  transition: background-color 0.2s ease;
+}
+
+a[href="/admin"]:hover {
+  text-decoration: underline;    /* Underline on hover */
+  background-color: #e6f0ff;     /* Light blue background on hover */
+}
+
+
+/* Navbar buttons for sign in / sign up */
+/* Minimal and natural look for auth buttons */
+.navbar .signin,
+.navbar .signup {
+  padding: 6px 14px;           /* 🔸 Smaller padding */
+  margin-left: 8px;            /* 🔸 Compact spacing between buttons */
+  border-radius: 4px;          /* 🔸 Slightly rounded corners */
+  font-size: 14px;             /* 🔸 Medium font */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* Sign In button – subtle outline */
+.navbar .signin {
+  color: white;
+  background-color:#28a745 ;
+  border: 1px solid #007bff;
+}
+
+.navbar .signin:hover {
+
+  color: white;
+}
+
+/* Sign Up button – filled green */
+.navbar .signup {
+  color: white;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.navbar .signup:hover {
+  background-color: #218838;
+}

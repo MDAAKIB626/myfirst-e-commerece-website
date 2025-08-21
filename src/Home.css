@@ -1,0 +1,151 @@
+.trendindimages {
+    text-align: center;
+    padding: 20px;
+}
+
+.trendindimages h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.images img {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ✅ Media Query for smaller screens (mobile & tablets) */
+@media (max-width: 1024px) {
+    .images {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    .images img {
+        width: 90%; /* Take almost full width of the screen */
+        max-width: 400px;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* Container for the admin product section */
+.admin-home-products {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.admin-home-products h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Flex container for product cards */
+.admin-home-product-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual product card */
+.admin-product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.admin-product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.admin-product-card h4 {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.admin-product-card p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.homeremovebtn,
+.homeaddbtn {
+  margin: 8px 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.homeremovebtn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.homeaddbtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.homeremovebtn:hover {
+  background-color: #e60000;
+}
+
+.homeaddbtn:hover {
+  background-color: #218838;
+}
+.oldprice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-home-product-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-product-card {
+    width: 90%;
+  }
+}
+
+
+
+
