@@ -1,140 +1,147 @@
 
 
+/* Container for all product cards */
 .products-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 40px 30px;
-  background-color: #f9f9f9;
-  
-  
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
+/* Single Product Card */
 .product-card {
-  height:350px;
-  width:100%;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Product Image */
 .product-image {
   width: 100%;
-  height:200px;
-  object-fit:contain;
-  display:block;
-  margin: auto;
-  background-color: #f9f9f9;
+  height: 220px;
+  background-color: #f5f5f5; /* shows background if image smaller */
+  transition: transform 0.3s ease;
+  object-fit:cover;
 }
 
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Product Info Section */
 .product-info {
-  padding: 16px;
-  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* Tag/Title */
 .tag {
-  font-size: 10px;
-  color: #888;
-  margin-bottom: 5px;
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+/* Brand */
 .brand {
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #333;
-  margin: 6px 0;
+  margin: 0;
 }
 
+/* Price Section */
 .price {
-  margin: 10px 0;
-  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
 }
 
+/* Discount badge */
 .discount {
-  color: #e53935;
+  background-color: #ff3b30;
+  color: #fff;
   font-weight: bold;
-  margin-right: 6px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
 }
 
+/* Old price */
 .old-price {
   text-decoration: line-through;
-  color: #888;
-  margin-right: 6px;
+  color: #999;
 }
 
+/* New price */
 .new-price {
-  color: #2e7d32;
   font-weight: bold;
+  color: #333;
 }
 
+/* Rating stars */
 .rating {
-  font-size: 10px;
-  margin: 10px 0;
-  color: #ff9800;
+  font-size: 0.85rem;
+  color: #f5a623; /* gold color for stars */
 }
 
+/* Buttons Section */
 .buttons {
-  display: flex;
-  justify-content: center;
   margin-top: 10px;
 }
 
 .add-btn {
-  background-color: #1976d2;
-  color: #fff;
-  padding: 10px 16px;
-  font-size: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
   width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .add-btn:hover {
-  background-color: #125ea2;
+  background-color: #0056b3;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/* 📱 Responsive */
-@media (max-width: 1200px) {
+/* Laptop 5 columns */
+@media (max-width: 1440px) {
   .products-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
-@media (max-width: 992px) {
+/* Tablet 3 columns */
+@media (max-width: 1024px) {
   .products-cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* Mobile 1 column */
 @media (max-width: 768px) {
-  .products-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
   .products-cards {
     grid-template-columns: 1fr;
   }
-
 }

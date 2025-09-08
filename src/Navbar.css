@@ -1,55 +1,92 @@
+/* 🔹 Navbar Sticky */
+.navbar {
+  position: sticky;   /* Navbar ko top pe fix karne ke liye */
+  top: 0;
+  z-index: 1020;      /* Bootstrap ke default se thoda zyada */
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+/* 🔹 Navbar brand (logo) */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #007bff !important;
+  letter-spacing: 1px;
+}
 
+/* 🔹 Navbar links */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333 !important;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+
+/* 🔹 Cart icon */
+.cart-icon {
+  position: relative;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: #007bff;
+}
+
+/* 🔹 Cart badge */
+.count-items {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+/* 🔹 Admin link modern style */
 a[href="/admin"] {
-  color: #007bff;           /* Blue link color */
-  text-decoration: none;    /* Remove underline */
-  font-weight: bold;        /* Make text bold */
-  cursor: pointer;          /* Pointer cursor on hover */
-  padding: 4px 8px;         /* Some padding */
-  border-radius: 3px;       /* Slightly rounded corners */
-  transition: background-color 0.2s ease;
+  margin: 0 1rem;
+  font-weight: 600;
+  color: #fff;                  /* white text */
+  background-color: #007bff;    /* blue background */
+  padding: 6px 12px;            /* thoda padding */
+  border-radius: 6px;           /* rounded corners */
+  text-decoration: none;
+  transition: all 0.3s ease;    /* smooth transition */
+  font-size: 0.95rem;
 }
 
 a[href="/admin"]:hover {
-  text-decoration: underline;    /* Underline on hover */
-  background-color: #e6f0ff;     /* Light blue background on hover */
+  background-color: #0056b3;    /* dark blue on hover */
+  transform: translateY(-2px);  /* small lift effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
-/* Navbar buttons for sign in / sign up */
-/* Minimal and natural look for auth buttons */
-.navbar .signin,
-.navbar .signup {
-  padding: 6px 14px;           /* 🔸 Smaller padding */
-  margin-left: 8px;            /* 🔸 Compact spacing between buttons */
-  border-radius: 4px;          /* 🔸 Slightly rounded corners */
-  font-size: 14px;             /* 🔸 Medium font */
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  display: inline-block;
-  line-height: 1.2;
+/* 🔹 Logout button */
+.btn-danger {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background: #dc3545;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* Sign In button – subtle outline */
-.navbar .signin {
-  color: white;
-  background-color:#28a745 ;
-  border: 1px solid #007bff;
-}
-
-.navbar .signin:hover {
-
-  color: white;
-}
-
-/* Sign Up button – filled green */
-.navbar .signup {
-  color: white;
-  background-color: #28a745;
-  border: 1px solid #28a745;
-}
-
-.navbar .signup:hover {
-  background-color: #218838;
+.btn-danger:hover {
+  background: #b52a37;
 }

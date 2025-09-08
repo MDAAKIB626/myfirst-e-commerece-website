@@ -1,20 +1,11 @@
-import React, { createContext, useState, useEffect } from 'react';
+// ProductContext.js
+import React, { createContext, useState } from "react";
 
-// Create ProductContext
 export const ProductContext = createContext();
 
-// Provider component
 export const ProductProvider = ({ children }) => {
-  // Initialize products from localStorage
-  const [products, setProducts] = useState(() => {
-    const storedProducts = localStorage.getItem('products');
-    return storedProducts ? JSON.parse(storedProducts) : [];
-  });
-
-  // Save products to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products));
-  }, [products]);
+  const storedProducts = localStorage.getItem("products");
+  const [products, setProducts] = useState(storedProducts ? JSON.parse(storedProducts) : []);
 
   return (
     <ProductContext.Provider value={{ products, setProducts }}>
